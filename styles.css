@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px; /* Abgerundete Ecken */
+    border: 3px solid #d1d1d1; /* Äußerer Rahmen */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+    background-image: url('https://i.pinimg.com/originals/5a/cd/62/5acd62345855be2562c2bb6e32cac93e.jpg');
+    background-size: cover; /* Deckt den gesamten Container ab */
+    background-position: center; /* Zentriert das Bild */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 12px;
+    border: 1px solid #a1a1a1; /* Innerer Rahmen */
+    z-index: -1;
+}
+
+h1 {
+    color: white; /* Titel in Weiß */
+}
+
+#timer-display {
+    font-size: 48px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px; /* Runde Ecken für den Timer-Display */
+    background-color: rgba(224, 224, 224, 0.5); /* Leicht transparenter Hintergrund für bessere Lesbarkeit */
+}
+
+button {
+    background-color: #D2FFB4; /* Hellgrün */
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #7acc7a; /* Etwas dunkleres Hellgrün bei Hover */
+}
+
+#phase {
+    margin-top: 20px;
+    font-size: 24px;
+	color: aliceblue;
+}
+
+@keyframes blink {
+    0% { background-color: red; }
+    50% { background-color: #fff; }
+    100% { background-color: red; }
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
